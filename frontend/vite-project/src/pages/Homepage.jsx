@@ -2,8 +2,8 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AboutUs from '../components/AboutUs';
-import Faculty from '../components/Faculty';
-import Criteria from '../components/Criteria';
+
+
 import { useNavigate } from 'react-router-dom';
 import '../styles/global.css'; // Import global styles
 
@@ -22,12 +22,8 @@ const HomePage = () => {
                     <section>
                         <AboutUs />
                     </section>
-                    <section>
-                        <Faculty />
-                    </section>
-                    <section>
-                        <Criteria />
-                    </section>
+                    
+                    
                     <section className="center">
                         <button onClick={handleLoginClick}>
                             Login
