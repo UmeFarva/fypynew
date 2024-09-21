@@ -1,0 +1,144 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Softer blue background */
+.login-page {
+    display: flex;
+    height: 100vh;
+    background-color: #e6f0ff; /* Soft blue background */
+}
+
+.login-form-container {
+    flex: 1;
+    background-color: #0056b3; /* Darker blue for contrast */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-form-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.login-form-container button {
+    padding: 10px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    margin-top: 10px;
+}
+
+.login-form-container button:hover {
+    background-color: #e6b107;
+}
+
+/* Registration Button */
+.registration-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+}
+
+.registration-button:hover {
+    background-color: #e6b107;
+}
+
+/* Slideshow */
+.slideshow-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Soft light background for readability */
+    padding: 40px;
+    position: relative;
+}
+
+.slide {
+    text-align: center;
+    max-width: 80%;
+}
+
+.slide h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.slide p {
+    font-size: 18px;
+    color: #333;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    padding: 10px;
+    width: 100%;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.registration-form button:hover {
+    background-color: #003f87;
+}
+
+/* Slide Indicators */
+.slide-indicators {
+    margin-top: 20px;
+}
+
+.slide-indicators span {
+    height: 10px;
+    width: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slide-indicators .active {
+    background-color: #0056b3;
+}

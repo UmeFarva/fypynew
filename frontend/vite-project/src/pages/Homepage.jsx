@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
+import Header from '../components/Header';  // Header with University name and info
 import Footer from '../components/Footer';
 import AboutUs from '../components/AboutUs';
-import Criteria from '../components/Criteria';  // Updated to use Criteria
+import Criteria from '../components/Criteria';
 import Faculty from '../components/Faculty';
 import { useNavigate } from 'react-router-dom';
 import '../styles/global.css';
@@ -16,13 +16,15 @@ const HomePage = () => {
 
     return (
         <div>
-            <Header />
+            {/* Header for university info */}
+            <Header /> 
+
             {/* Navigation Bar */}
             <nav className="navbar">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#criteria">Criteria</a></li> {/* Updated to Criteria */}
+                    <li><a href="#criteria">Criteria</a></li>
                     <li><a href="#faculty-info">Faculty</a></li>
                 </ul>
             </nav>
@@ -30,7 +32,7 @@ const HomePage = () => {
             {/* Main Content */}
             <div className="container">
                 <main>
-                    {/* Hero Section with Image */}
+                    {/* Hero Section */}
                     <section className="hero-section">
                         <div className="hero-text">
                             <h1>Welcome to Sukkur IBA University</h1>
@@ -46,7 +48,7 @@ const HomePage = () => {
                     </section>
 
                     {/* Criteria Section */}
-                    <Criteria />  {/* Updated to Criteria */}
+                    <Criteria />
 
                     {/* Faculty Section */}
                     <Faculty />
