@@ -1,5 +1,6 @@
+// src/pages/HomePage.jsx
 import React from 'react';
-import Header from '../components/Header';  // Header with University name and info
+import Header from '../components/header';
 import Footer from '../components/Footer';
 import AboutUs from '../components/AboutUs';
 import Criteria from '../components/Criteria';
@@ -10,16 +11,9 @@ import '../styles/global.css';
 const HomePage = () => {
     const navigate = useNavigate();
 
-    const handleLoginClick = () => {
-        navigate('/login');
-    };
-
     return (
         <div>
-            {/* Header for university info */}
-            <Header /> 
-
-            {/* Navigation Bar */}
+            <Header />
             <nav className="navbar">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -28,37 +22,25 @@ const HomePage = () => {
                     <li><a href="#faculty-info">Faculty</a></li>
                 </ul>
             </nav>
-
-            {/* Main Content */}
             <div className="container">
                 <main>
-                    {/* Hero Section */}
                     <section className="hero-section">
                         <div className="hero-text">
                             <h1>Welcome to Biometric Attendance Management System</h1>
-                            <p>A seamless solution for accurate attendance tracking using state-of-the-art biometric technology. 
-                            Enhance your institution's efficiency and ensure reliable attendance records.</p>
-                            <button className="cta-button" onClick={handleLoginClick}>Login</button>
+                            <p>A seamless solution for accurate attendance tracking using state-of-the-art biometric technology.</p>
+                            <button className="cta-button" onClick={() => navigate('/login')}>Login</button>
                         </div>
                     </section>
-
-                    {/* About Us Section */}
                     <section id="about-us">
                         <AboutUs />
                     </section>
-
-                    {/* Criteria Section */}
                     <section id="criteria">
-                        <Criteria />
-                    </section>
-
-                    {/* Faculty Section */}
+                        <Criteria />                    </section>
                     <section id="faculty-info">
                         <Faculty />
                     </section>
                 </main>
-            </div>
-
+\            </div>
             <Footer />
         </div>
     );

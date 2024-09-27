@@ -29,7 +29,8 @@ const Faculty = () => {
                 <div className="faculty-item">
                     <h3>User-Friendly Interface</h3>
                     <p>An intuitive, modern interface designed to minimize learning curves for users.</p>
-                </div>
+                </div> 
+                
             </div>
         </div>
     );

@@ -28,7 +28,7 @@ function LoginPage() {
 
     // Handler for navigation to the registration page
     const handleRegisterClick = () => {
-        navigate('/pages/RegistrationPage');
+        navigate('/register');
     };
 
     return (
