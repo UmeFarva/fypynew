@@ -1,0 +1,70 @@
+/* admin.css */
+
+.admin-dashboard {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.admin-header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: #e60000;
+}
+
+.dashboard-container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #f0f4f8;
+    width: 200px;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar button:hover {
+    background-color: #003d80;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+}

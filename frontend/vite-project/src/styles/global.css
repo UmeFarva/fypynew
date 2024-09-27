@@ -20,7 +20,7 @@ h1, h2, h3 {
 
 /* Header */
 header {
-    background-color: #f7f8f9;
+    background-color: #0056b3;
     padding: 20px 0;
     text-align: center;
     border-bottom: 3px solid #003d80; /* Slightly darker border for contrast */
@@ -82,7 +82,7 @@ header p {
     align-items: center;
     padding: 80px 0;
     background-color: #e6f0ff;
-   
+    border-bottom: 2px solid #0056b3;
 }
 
 .hero-text {

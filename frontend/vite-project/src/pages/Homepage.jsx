@@ -35,12 +35,11 @@ const HomePage = () => {
                     {/* Hero Section */}
                     <section className="hero-section">
                         <div className="hero-text">
-                            
+                            <h1>Welcome to Biometric Attendance Management System</h1>
                             <p>A seamless solution for accurate attendance tracking using state-of-the-art biometric technology. 
                             Enhance your institution's efficiency and ensure reliable attendance records.</p>
                             <button className="cta-button" onClick={handleLoginClick}>Login</button>
                         </div>
-                        <img src="/images/iris.jpg" alt="University Campus" className="hero-image" />
                     </section>
 
                     {/* About Us Section */}
@@ -49,10 +48,14 @@ const HomePage = () => {
                     </section>
 
                     {/* Criteria Section */}
-                    <Criteria />
+                    <section id="criteria">
+                        <Criteria />
+                    </section>
 
                     {/* Faculty Section */}
-                    <Faculty />
+                    <section id="faculty-info">
+                        <Faculty />
+                    </section>
                 </main>
             </div>
 
