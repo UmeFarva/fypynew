@@ -1,30 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // For navigation
 import '../styles/login.css';
 
 function LoginPage() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const navigate = useNavigate(); // Hook to navigate to registration page
 
     // Array of slides with content
     const slides = [
         {
-            title: "Welcome to Sukkur IBA University",
-            content: "Pioneering excellence in education and innovation for tomorrow's leaders.",
+            title: "Welcome to Biometric Attendance Management System",
+            content: "Pioneering excellence in attendance tracking and innovation for seamless management.",
         },
         {
             title: "Our Programs",
-            content: "Explore our diverse programs designed to cultivate skills for the future.",
-        },
-        {
-            title: "Registration",
-            content: (
-                <form className="registration-form">
-                    <h2>Register Here</h2>
-                    <input type="text" placeholder="Full Name" required />
-                    <input type="email" placeholder="Email" required />
-                    <input type="password" placeholder="Password" required />
-                    <button type="submit">Register</button>
-                </form>
-            ),
+            content: "Explore our features designed to simplify attendance tracking and management.",
         },
     ];
 
@@ -36,6 +26,11 @@ function LoginPage() {
         return () => clearInterval(interval);
     }, [slides.length]);
 
+    // Handler for navigation to the registration page
+    const handleRegisterClick = () => {
+        navigate('/register');
+    };
+
     return (
         <div className="login-page">
             {/* Login Form Section */}
@@ -46,6 +41,13 @@ function LoginPage() {
                     <input type="password" placeholder="Password" required />
                     <button type="submit">Login</button>
                 </form>
+
+                {/* Register Button */}
+                <div className="register-button-container">
+                    <button className="register-button" onClick={handleRegisterClick}>
+                        Register
+                    </button>
+                </div>
             </div>
 
             {/* Slideshow Section */}

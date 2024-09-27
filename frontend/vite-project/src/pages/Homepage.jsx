@@ -35,11 +35,12 @@ const HomePage = () => {
                     {/* Hero Section */}
                     <section className="hero-section">
                         <div className="hero-text">
-                            <h1>Welcome to Sukkur IBA University</h1>
-                            <p>Empowering the next generation of innovators and leaders.</p>
+                            
+                            <p>A seamless solution for accurate attendance tracking using state-of-the-art biometric technology. 
+                            Enhance your institution's efficiency and ensure reliable attendance records.</p>
                             <button className="cta-button" onClick={handleLoginClick}>Login</button>
                         </div>
-                        <img src="src/images/images.jpg" alt="University Campus" className="hero-image" />
+                        <img src="/images/iris.jpg" alt="University Campus" className="hero-image" />
                     </section>
 
                     {/* About Us Section */}

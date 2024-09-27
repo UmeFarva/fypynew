@@ -1,29 +1,37 @@
-/* Global reset */
-* {
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f0ff; /* Light blue background for a professional look */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Softer blue background */
-.login-page {
     display: flex;
-    height: 100vh;
-    background-color: #e6f0ff; /* Soft blue background */
-}
-
-.login-form-container {
-    flex: 1;
-    background-color: #0056b3; /* Darker blue for contrast */
-    color: white;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    height: 100vh;
+}
+
+/* Login Page Container */
+.login-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Login Form Container */
+.login-form-container {
+    width: 40%;
+    padding: 20px;
 }
 
 .login-form-container h2 {
+    font-size: 28px;
+    color: #0056b3;
     margin-bottom: 20px;
 }
 
@@ -33,112 +41,94 @@
 }
 
 .login-form-container input {
+    margin-bottom: 15px;
     padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    outline: none;
     font-size: 16px;
 }
 
 .login-form-container button {
+    background-color: #0056b3;
+    color: white;
     padding: 10px;
-    background-color: #ffc107;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    color: black;
-    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .login-form-container button:hover {
-    background-color: #e6b107;
+    background-color: #ffc107;
 }
 
-/* Registration Button */
-.registration-button {
+/* Register Button */
+.register-button-container {
     margin-top: 20px;
+}
+
+.register-button {
+    background-color: #0056b3;
+    color: white;
     padding: 10px;
-    background-color: #ffc107;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    color: black;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
-.registration-button:hover {
-    background-color: #e6b107;
+.register-button:hover {
+    background-color: #ffc107;
 }
 
-/* Slideshow */
+/* Slideshow Container */
 .slideshow-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa; /* Soft light background for readability */
-    padding: 40px;
-    position: relative;
+    width: 50%;
+    padding: 20px;
+    background-color: #f7faff; /* Light background for contrast */
+    border-radius: 10px;
+    text-align: center;
 }
 
 .slide {
-    text-align: center;
-    max-width: 80%;
+    margin-bottom: 20px;
 }
 
 .slide h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 24px;
     color: #0056b3;
 }
 
 .slide p {
-    font-size: 18px;
-    color: #333;
-}
-
-.registration-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.registration-form button {
-    padding: 10px;
-    width: 100%;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-}
-
-.registration-form button:hover {
-    background-color: #003f87;
+    color: #333;
 }
 
 /* Slide Indicators */
 .slide-indicators {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .slide-indicators span {
-    height: 10px;
+    display: block;
     width: 10px;
+    height: 10px;
+    margin: 0 5px;
     background-color: #ccc;
     border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.slide-indicators .active {
+.slide-indicators span.active {
     background-color: #0056b3;
+}
+
+.slide-indicators span:hover {
+    background-color: #ffc107;
 }
