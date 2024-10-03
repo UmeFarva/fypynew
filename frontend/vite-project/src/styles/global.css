@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     color: #333;
     background-color: #f0f4f8; /* Light background for entire site */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .container {
@@ -59,6 +60,7 @@ header p {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
 }
 
 .navbar ul {
@@ -68,6 +70,7 @@ header p {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar li {
@@ -94,12 +97,15 @@ header p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 0;
+    padding: 80px 20px; /* Added padding to ensure no overflow */
     background-color: #e6f0ff;
+    flex-wrap: wrap;
 }
 
 .hero-text {
     max-width: 50%;
+    padding: 20px; /* Added padding for spacing */
+    box-sizing: border-box;
 }
 
 .hero-text h1 {
@@ -150,7 +156,7 @@ header p {
 
 /* Criteria Section */
 .criteria-section {
-    padding: 60px 0;
+    padding: 60px 20px;
     background-color: #ffffff;
     text-align: center;
 }
@@ -158,7 +164,8 @@ header p {
 .criteria-list {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    margin: 0 auto;
 }
 
 .criteria-item {
@@ -186,7 +193,7 @@ header p {
 
 /* Faculty (Features) Section */
 .faculty-section {
-    padding: 60px 0;
+    padding: 60px 20px;
     background-color: #f7faff;
     text-align: center;
 }
@@ -194,7 +201,7 @@ header p {
 .faculty-list {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Flex-wrap to handle overflow */
 }
 
 .faculty-item {
@@ -227,4 +234,38 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero-text {
+        max-width: 100%; /* Full width on small screens */
+        padding: 10px;
+    }
+
+    .criteria-item,
+    .faculty-item {
+        width: 100%; /* Full width for cards on small screens */
+        margin: 10px 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
 }

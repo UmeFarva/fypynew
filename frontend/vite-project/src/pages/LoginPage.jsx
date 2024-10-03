@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // For navigation
-import '../styles/login.css';
+import { useNavigate } from 'react-router-dom';
+import '../styles/login.css'; // Ensure this file contains the CSS mentioned above
 
 function LoginPage() {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const navigate = useNavigate(); // Hook to navigate to registration page
+    const navigate = useNavigate();
 
-    // Array of slides with content
     const slides = [
         {
             title: "Welcome to Biometric Attendance Management System",
@@ -18,22 +17,23 @@ function LoginPage() {
         },
     ];
 
-    // Auto slide change
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-        }, 5000); // Change slide every 5 seconds
+        }, 5000);
         return () => clearInterval(interval);
     }, [slides.length]);
 
-    // Handler for navigation to the registration page
     const handleRegisterClick = () => {
         navigate('/register');
+    };
+    
+    const handleForgetClick = () => {
+        navigate('/forget');
     };
 
     return (
         <div className="login-page">
-            {/* Login Form Section */}
             <div className="login-form-container">
                 <h2>Login</h2>
                 <form>
@@ -42,10 +42,13 @@ function LoginPage() {
                     <button type="submit">Login</button>
                 </form>
 
-                {/* Register Button */}
+                {/* Register and Forgot Password Buttons */}
                 <div className="register-button-container">
                     <button className="register-button" onClick={handleRegisterClick}>
                         Register
+                    </button>
+                    <button className="register-button" onClick={handleForgetClick}>
+                        Forgot Password
                     </button>
                 </div>
             </div>
@@ -57,7 +60,6 @@ function LoginPage() {
                     <p>{slides[currentSlide].content}</p>
                 </div>
 
-                {/* Slide Indicators */}
                 <div className="slide-indicators">
                     {slides.map((_, index) => (
                         <span

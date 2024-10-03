@@ -63,9 +63,12 @@ body {
     background-color: #ffc107;
 }
 
-/* Register Button */
+/* Register and Forgot Password Buttons (side by side) */
 .register-button-container {
+    display: flex;
+    justify-content: space-between; /* Align buttons horizontally */
     margin-top: 20px;
+    width: 100%;
 }
 
 .register-button {
@@ -76,7 +79,7 @@ body {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    width: 100%;
+    width: 48%; /* Each button takes up nearly half of the container */
     transition: background-color 0.3s ease;
 }
 

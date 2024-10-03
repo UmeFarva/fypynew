@@ -2,114 +2,138 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* Apply border-box sizing model to all elements */
+    box-sizing: border-box;
 }
 
 /* Body Styles */
 body {
-    font-family: 'Arial', sans-serif; /* Font family for the body */
-    background-color: #e6f0ff; /* Light blue background for a professional look */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Flexbox for layout */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    height: 100vh; /* Full viewport height */
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f0ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Registration Page Styles */
 .registration-page {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Align items to the top */
-    align-items: stretch; /* Stretch to fill the width */
-    padding: 20px; /* Padding for spacing */
-    background-color: #f0f4f8; /* Light background color for a fresh look */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    width: 100%; /* Full width for the registration page */
-    max-width: 800px; /* Maximum width to ensure it doesn't get too wide */
-    margin: auto; /* Center the registration page */
-    overflow-y: auto; /* Allow vertical scrolling if needed */
-    max-height: 90vh; /* Maximum height to fit within viewport */
+    display: flex;
+    justify-content: space-between; /* Space between form and slideshow */
+    align-items: flex-start; /* Align items at the top */
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+/* Form Container */
+.registration-form-container {
+    width: 50%;
+    padding: 20px;
 }
 
 /* Headings */
 .registration-page h2 {
-    font-size: 28px; /* Font size for the main title */
-    color: #0056b3; /* Color for headings */
+    font-size: 28px;
+    color: #0056b3;
     margin-bottom: 20px;
-    text-align: center; /* Centered heading */
-}
-
-.registration-page h3 {
-    font-size: 22px; /* Font size for section titles */
-    color: #333; /* Color for section headings */
-    margin: 15px 0 10px; /* Spacing around section titles */
+    text-align: center;
 }
 
 /* Form Styles */
 .registration-form {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack inputs vertically */
-    width: 100%; /* Full width for the form */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-/* Input Fields */
 .registration-form input {
-    margin-bottom: 15px; /* Spacing between inputs */
-    padding: 12px; /* Increased padding for better touch target */
-    border: 1px solid #ccc; /* Light border for inputs */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size for input text */
-    transition: border-color 0.3s ease; /* Smooth transition on focus */
-}
-
-/* Focus Effect on Inputs */
-.registration-form input:focus {
-    border-color: #0056b3; /* Highlight border on focus */
-    outline: none; /* Remove default outline */
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
 
 /* Submit Button */
 .registration-form button {
-    background-color: #0056b3; /* Button color */
-    color: white; /* Text color for button */
-    padding: 14px; /* Increased padding for a bolder button */
-    border: none; /* No border for button */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size for button text */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transitions for hover effect */
+    background-color: #0056b3;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Button Hover Effect */
 .registration-form button:hover {
-    background-color: #ffc107; /* Change button color on hover */
-    transform: scale(1.05); /* Slightly scale up the button on hover */
+    background-color: #ffc107;
+    transform: scale(1.05);
 }
 
-/* Media Queries for Responsive Design */
+/* Slideshow Styles */
+.slideshow-container {
+    width: 45%; /* Adjust width for layout */
+   
+    padding: 20px;
+    background-color: #f7faff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+    margin-bottom: 20px;
+}
+
+.slide h2 {
+    font-size: 24px;
+    color: #0056b3;
+}
+
+.slide p {
+    font-size: 16px;
+    color: #333;
+}
+
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slide-indicators span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide-indicators span.active {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .registration-page {
-        padding: 10px; /* Reduce padding on smaller screens */
-        width: 100%; /* Allow form to take more width */
-        max-width: 100%; /* Ensure it fits the screen width */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .registration-page h2 {
-        font-size: 24px; /* Smaller font size for headings */
-    }
-
-    .registration-page h3 {
-        font-size: 20px; /* Smaller font size for section headings */
-    }
-
-    .registration-form input {
-        font-size: 14px; /* Smaller font size for inputs */
-    }
-
-    .registration-form button {
-        font-size: 14px; /* Smaller font size for button */
+    .registration-form-container, .slideshow-container {
+        width: 100%;
     }
 }
