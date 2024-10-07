@@ -1,32 +1,26 @@
-/* admin.css */
-
+/* General Dashboard Layout */
 .admin-dashboard {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: #f0f4f8;
 }
 
 .admin-header {
-    background-color: #0056b3;
-    color: white;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: #0056b3;
+    color: white;
 }
 
 .logout-button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
     padding: 10px 20px;
+    background-color: #ffc107;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
-}
-
-.logout-button:hover {
-    background-color: #e60000;
 }
 
 .dashboard-container {
@@ -35,8 +29,8 @@
 }
 
 .sidebar {
-    background-color: #f0f4f8;
     width: 200px;
+    background-color: #f7f7f7;
     padding: 20px;
 }
 
@@ -45,26 +39,64 @@
     padding: 0;
 }
 
-.sidebar li {
-    margin: 15px 0;
+.sidebar ul li {
+    margin-bottom: 10px;
 }
 
-.sidebar button {
+.sidebar ul li button {
+    width: 100%;
+    padding: 10px;
     background-color: #0056b3;
     color: white;
     border: none;
-    padding: 10px;
-    width: 100%;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.sidebar button:hover {
-    background-color: #003d80;
+.dashboard-content {
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #ffffff;
 }
 
-.dashboard-content {
-    flex: 1;
+/* Manage Users */
+.manage-users {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.manage-users h2 {
+    margin-bottom: 20px;
+}
+
+.manage-users table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.manage-users table th, .manage-users table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Attendance Reports */
+.attendance-reports {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Settings */
+.settings {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.settings form div {
+    margin-bottom: 20px;
+}
+
+/* Request Approval */
+.request-approval {
     padding: 20px;
     background-color: #ffffff;
 }

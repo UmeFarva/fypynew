@@ -22,12 +22,12 @@ const AdminDashboard = () => {
                         <li><button onClick={() => navigate('/manage-users')}>Manage Users</button></li>
                         <li><button onClick={() => navigate('/attendance-reports')}>Attendance Reports</button></li>
                         <li><button onClick={() => navigate('/settings')}>Settings</button></li>
+                        <li><button onClick={() => navigate('/request-approval')}>Request Approval</button></li>
                     </ul>
                 </aside>
                 <main className="dashboard-content">
                     <h2>Welcome to the Admin Dashboard</h2>
-                    <p>Manage users, view attendance reports, and configure settings.</p>
-                    {/* Add more components or features here */}
+                    <p>Manage users, view attendance reports, configure settings, and handle approval requests.</p>
                 </main>
             </div>
         </div>
